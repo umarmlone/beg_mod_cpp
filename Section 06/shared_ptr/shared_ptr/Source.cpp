@@ -1,43 +1,52 @@
-#include "Integer.h"
-#include <memory>
+
+#include <iostream>
+#include <string>
+
 class Project {
+	std::string m_Name ;
 public:
-	~Project() {
-		std::cout << "~Project()" << std::endl; 
+	void SetName(const std::string &name) {
+		m_Name = name ;
+	}
+	void ShowProjectDetails()const {
+		std::cout << "[Project Name]" << m_Name << '\n' ;
 	}
 };
+
 class Employee {
-	std::shared_ptr<Project> m_pProject ;
+	std::shared_ptr<Project> m_pProject{} ;
 public:
-	void SetProject(std::shared_ptr<Project> p) {
-		m_pProject = p ;
+	void SetProject(const std::shared_ptr<Project> &prj) {
+		m_pProject = prj ;
 	}
-	std::shared_ptr<Project> GetProject()const {
+	const std::shared_ptr<Project>& GetProject()const {
 		return m_pProject ;
 	}
-	~Employee() {
-		std::cout << "~Employee()" << std::endl; 
-	}
 };
-std::shared_ptr<Employee> AssignProject() {
-	std::shared_ptr<Project> p{new Project{}} ;
-	Employee *e1 = new Employee{} ;
-	e1->SetProject(p) ;
-	/*
-	 * ======= NOTE =======
-	 * Avoid assigning a raw pointer to a smart pointer.
-	 * Instead, use new expression directly inside
-	 * the smart pointer ctor e.g. std::shared_ptr<int> p{new int} ;
-	 * 
-	 * The following code is just for demonstration.
-	 */
-	return std::shared_ptr<Employee>{e1} ;
+void ShowInfo(const std::shared_ptr<Employee> & emp) {
+	std::cout << "Employee project details:" ;
+	emp->GetProject()->ShowProjectDetails() ;
 }
 int main() {
-	auto sp = AssignProject() ;
-	if(sp == nullptr) {
-		
+	std::shared_ptr<Project> prj { new Project{}} ;
+	prj->SetName("Video Decoder") ;
+	std::shared_ptr<Employee> e1 {new Employee{}} ;
+	e1->SetProject(prj) ;
+	std::shared_ptr<Employee> e2 { new Employee{} };
+	e2->SetProject(prj) ;
+	std::shared_ptr<Employee> e3 { new Employee{}} ;
+	e3->SetProject(prj) ;
+
+	e3.reset(new Employee{}) ;
+	if(e3) {
+		//Valid
+	}else {
+		//Not valid
 	}
-	sp.get() ;
-	sp.reset(new Employee{}) ;
+	
+	std::cout << "Reference count:" << prj.use_count() << '\n' ;
+	//ShowInfo(e1) ;
+	//ShowInfo(e2) ;
+	prj->ShowProjectDetails() ;
+
 }
