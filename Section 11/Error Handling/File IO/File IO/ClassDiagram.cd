@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Test">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAIAgAAAAAAAAAACAAAAAAAAAgCAA=</HashCode>
+      <FileName>Header.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_fstream&lt;_Elem, _Traits&gt;" Collapsed="true">
+    <Position X="10.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAgQAAAAAAAAAAAAACAAAAAAAAAACCAAAYAgAAEAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\fstream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_iostream&lt;_Elem, _Traits&gt;" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAIAAAAAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\istream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_istream&lt;_Elem, _Traits&gt;" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAQAAaAAAAhAACACQgEACAQAAAAAAQAgAAEQAIA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\istream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_ostream&lt;_Elem, _Traits&gt;" Collapsed="true">
+    <Position X="14.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAACAEAAAAAAAAAACCACAABAAAAAEAAAQggAAAAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ostream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_ios&lt;_Elem, _Traits&gt;" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEIABAAAAACAIAGAAAAAAEABAACAAAIAAUggAAKAgAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\ios</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_istringstream&lt;_Elem, _Traits, _Alloc&gt;" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAgAAAAAAAAAAAAAAAAAAAAAAAAUACAAAQAgAIAAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\sstream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_ostringstream&lt;_Elem, _Traits, _Alloc&gt;" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAgAAAAAAAAAgAAAAAAAAAAAAAAEACAAAQAgAAAAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\sstream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::basic_stringstream&lt;_Elem, _Traits, _Alloc&gt;" Collapsed="true">
+    <Position X="13.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAgAAgAAAAAAAAAAAAAAAAAAAAAEAGAAAQAgAAAAAAA=</HashCode>
+      <FileName>d:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\sstream</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
