@@ -2,12 +2,13 @@
 #include <fstream>
 #include <filesystem>
 void Alloc() {
-	int* p = malloc(sizeof(int));
+	int* p = (int *)malloc(sizeof(int));
 	if (p != nullptr) {
 		*p = 50;
 		free(p);
 	}
-	//if (initializationj condition) {
+	//if (initialization condition) {
+
 	if (int* p = (int*)malloc(sizeof(int)); p != nullptr) {
 		*p = 50;
 		free(p);
@@ -16,34 +17,49 @@ void Alloc() {
 		//Here p will be nullptr
 	}
 }
-void Write(std::string data) {
-	std::ofstream out{ "file.txt" };
-	if (out) {
-		if (data.empty()) {
-			std::cout << data;
-		}
-		else {
-			std::cout << "No data to write ";
-		}
-	}
-	if (std::ofstream out{ "file.txt" }; !data.empty()) {
-		std::cout << data;
+void Write(const std::string& data) {
+	
+	if (std::ofstream out{ "file.txt" }; out && !data.empty()) {
+		std::cout << "Writing data into the file\n";
+		out << data;
 	}
 	else {
-		std::cout < < "no data to write \n";
+		std::cout << "Not data to write\n" ;
+		out << "####";
 	}
+
+	///More statements
+
 }
 
-void UsingSwitch(int errorCode) {
-	switch (std::ofstream out{ "file.txt" }; errorCode) {
-	case 0:
-		out << "Invalid parameter";
-		break;
-	case 1:
-		out << "Could not read from file";
-		break;
+class FileInfo {
+public:
+	enum Type{Executable, Text};
+	Type GetFileType()const {
+		return {} ;
 	}
+	size_t GetFileSize()const {
+		return 0 ;
+	}
+};
+
+FileInfo GetInfo(const std::string &file) {
+	return {} ;
 }
+
+void Operate(const std::string &file) {
+	
+	switch (auto info = GetInfo(file) ;info.GetFileType()) {
+	case FileInfo::Executable:
+		break ;
+	case FileInfo::Text:
+		break ;
+	default:
+		break ;
+	}
+	//More statements
+}
+
 int main(){
-	UsingSwitch() ;
+	Write("") ;
 }
